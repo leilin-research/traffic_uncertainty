@@ -1,1 +1,1 @@
-# This repository include the code and data for the paper "Quantifying Uncertainty in Short-term Traffic Volume Prediction and its Application to Optimal Staffing Plan Development" submitted to Transportation Research Record Part C: Emerging Technologies. 
+# This repository include the codes and data for the paper "Quantifying Uncertainty in Short-term Traffic Volume Prediction and its Application to Optimal Staffing Plan Development" submitted to Transportation Research Record Part C: Emerging Technologies. 
