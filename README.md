@@ -2,7 +2,8 @@
 
 the paper "Quantifying Uncertainty in Short-term Traffic Volume Prediction and its Application to Optimal Staffing Plan Development" submitted to Transportation Research Record Part C: Emerging Technologies. 
 
-Model:
+**Model:**
+
 pso.m - particle swarm optimization algorithm
 
 elm_pi.m - extreme learning machine algorithm to provide prediction intervals
@@ -12,7 +13,8 @@ pso_elm.m - optimize elm parameters with pso for interval predictions
 Improved_pso_elm.m - on-line version of pso-elm model
 
 
-Results:
+**Results:**
+
 ARMA.csv - results from ARMA model
 
 Zhang_2014.csv - results from paper "Zhang, Y., Zhang, Y., Haghani, A., 2014. A hybrid short-term traffic flow forecasting meth-od based on spectral analysis and statistical volatility model."
