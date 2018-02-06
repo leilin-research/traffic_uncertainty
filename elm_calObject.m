@@ -1,4 +1,4 @@
-function [ objVal,flag,A1,A,B,preInterval] = calObject( preInterval,target, conInterval,m1,m2, w1, w2)
+function [ objVal,flag,A1,A,B,preInterval] = elm_calObject( preInterval,target, conInterval,m1,m2, w1, w2, ol)
 % preInterval is the prediction interval for each observation
 % target is the real value
 % conInterval 99%, 95%, 90%
@@ -31,8 +31,12 @@ end
 % reliability
 re=cor/n1;
 % average coverage error
-%A1=abs(re-conInterval);
-A1=conInterval - re;
+if ol == 0
+    A1=abs(re-conInterval);
+else
+    A1=conInterval - re;
+end
+
 A=re-conInterval;
 % sharpness
 % conInterval=0; % remember to comment back;

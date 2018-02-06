@@ -1,4 +1,4 @@
-function [ globOptimal,bestValue, psoIterRecord ] = pso( ini_outputWeight,resHidden,popNum,iteNum,Target,conInterval,speed,w,c1,c2,fai,lo,m1,m2, w1, w2)
+function [ globOptimal,bestValue, psoIterRecord ] = pso( ini_outputWeight,resHidden,popNum,iteNum,Target,conInterval,speed,w,c1,c2,fai,lo,m1,m2, w1, w2,ol)
 % ini_outputWeight in Extreme Learning machine, the initial result
 % resHidden, result from hidden layer, or the input of the output layer
 % popNum, population number in PSO algorithm
@@ -38,7 +38,7 @@ normsharpV=ones(popNum,1)*100000;
 for j=1:1:iteNum
     for i=1:1:popNum
         preInterval=(resHidden'*outputWeightPop(:,:,i))'; % the output of ELM
-        [ objVal,flag, reliability, unabsrelia, normsharp]= elm_calObject( preInterval,Target(1,:)/(1-lo), conInterval,m1,m2, w1, w2);
+        [ objVal,flag, reliability, unabsrelia, normsharp]= elm_calObject( preInterval,Target(1,:)/(1-lo), conInterval,m1,m2, w1, w2, ol);
         if flag==0 && objectValue(i)>objVal % flag is 1 means the interval is wrong
             objectValue(i)=objVal; %update the minimumm object value;
             reliValue(i)=reliability;

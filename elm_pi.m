@@ -1,4 +1,4 @@
-function [objVal_train,objVal_test,TY,flag,InputWeight,biasofHiddenNeurons,OutputWeight,A1,A,S,psoIterRecord,elmobjVal_test,elmflag,elmA1,elmA,elmS]= elm_pi( training,testing,No_of_Output,NumberofHiddenNeurons, ActivationFunction,popNum,iteNum,w,c1,c2,fai,conInterval,speed,lo,m1,m2,w1,w2)
+function [objVal_train,objVal_test,TY,flag,InputWeight,biasofHiddenNeurons,OutputWeight,A1,A,S,psoIterRecord,elmobjVal_test,elmflag,elmA1,elmA,elmS]= elm_pi( training,testing,No_of_Output,NumberofHiddenNeurons, ActivationFunction,popNum,iteNum,w,c1,c2,fai,conInterval,speed,lo,m1,m2,w1,w2, ol)
 %ActivationFunction: sigmoid sine hardlim
     %%%%%%%%%%% Load training dataset
     train_data=training;
@@ -62,10 +62,10 @@ function [objVal_train,objVal_test,TY,flag,InputWeight,biasofHiddenNeurons,Outpu
         %%%%%%%% More activation functions can be added here        
     end
     TY=(H_test' * OutputWeight)';   
-    [ elmobjVal_test,elmflag,elmA1,elmA, elmS,elmTY] = elm_calObject( TY,TV.T(1,:)/(1-lo), conInterval,m1,m2, w1, w2);
+    [ elmobjVal_test,elmflag,elmA1,elmA, elmS,elmTY] = elm_calObject( TY,TV.T(1,:)/(1-lo), conInterval,m1,m2, w1, w2, ol);
     
     %%%%%%%%%%% Calculate the output weights throught PSO algorithm
-    [OutputWeight,objVal_train,psoIterRecord]=pso(OutputWeight,H,popNum,iteNum,T,conInterval,speed,w,c1,c2,fai,lo,m1,m2, w1, w2);
+    [OutputWeight,objVal_train,psoIterRecord]=pso(OutputWeight,H,popNum,iteNum,T,conInterval,speed,w,c1,c2,fai,lo,m1,m2, w1, w2, ol);
    
     %%% calculate the prediction for the testing dataset
     tempH_test=InputWeight*TV.P;
@@ -86,7 +86,7 @@ function [objVal_train,objVal_test,TY,flag,InputWeight,biasofHiddenNeurons,Outpu
         %%%%%%%% More activation functions can be added here        
     end
     TY=(H_test' * OutputWeight)';   
-    [ objVal_test,flag,A1,A,S,TY] = elm_calObject( TY,TV.T(1,:)/(1-lo), conInterval,m1,m2, w1, w2);
+    [ objVal_test,flag,A1,A,S,TY] = elm_calObject( TY,TV.T(1,:)/(1-lo), conInterval,m1,m2, w1, w2, ol);
     
 %     pre=mean(abs(TY-TV.T)./TV.T);
 end

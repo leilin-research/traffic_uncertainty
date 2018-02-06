@@ -45,6 +45,8 @@ final_bestOutWei = [];
 final_bestpre = [];
 final_bestpsoIterRecord = [];
 
+ol = 1;
+
 for l=1:1:9
     % data=[quantity*(1-lo),quantity*(1+lo),day_item price];
     training=data(1:len1(l)-No_of_Input,:); % the training size may be changing based on the number of input layer
@@ -60,7 +62,7 @@ for l=1:1:9
     
     for i=1:1:100
         i
-        [objVal_train,objVal_test, pre,flag,InputWeight,biasofHiddenNeurons,OutputWeight,A1,A,S,psoIterRecord,elmobjVal_test,elmflag,elmA1,elmA, elmS] = elm_pi( training,testing,No_of_Output,NumberofHiddenNeurons, ActivationFunction,popNum,iteNum,w,c1,c2,fai,conInterval,speed,lo,m1,m2, w1, w2);
+        [objVal_train,objVal_test, pre,flag,InputWeight,biasofHiddenNeurons,OutputWeight,A1,A,S,psoIterRecord,elmobjVal_test,elmflag,elmA1,elmA, elmS] = elm_pi( training,testing,No_of_Output,NumberofHiddenNeurons, ActivationFunction,popNum,iteNum,w,c1,c2,fai,conInterval,speed,lo,m1,m2, w1, w2, ol);
         
         if objVal_train<bestscore
             bestscore = objVal_train;
