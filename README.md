@@ -12,6 +12,10 @@ pso_elm.m - optimize elm parameters with pso for interval predictions
 
 Improved_pso_elm.m - on-line version of pso-elm model
 
+ARMA.R - Simple ARMA model
+
+KalmanFilter.R - Kalman Filter model
+
 
 **Results:**
 
