@@ -16,6 +16,8 @@ ARMA.R - Simple ARMA model
 
 KalmanFilter.R - Kalman Filter model
 
+spectral_arima_gjr_garch.R - model based on paper "Zhang, Y., Zhang, Y., Haghani, A., 2014. A hybrid short-term traffic flow forecasting meth-od based on spectral analysis and statistical volatility model."
+
 
 **Results:**
 
