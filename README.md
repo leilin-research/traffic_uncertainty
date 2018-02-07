@@ -18,6 +18,11 @@ KalmanFilter.R - Kalman Filter model
 
 spectral_arima_gjr_garch.R - model based on paper "Zhang, Y., Zhang, Y., Haghani, A., 2014. A hybrid short-term traffic flow forecasting meth-od based on spectral analysis and statistical volatility model."
 
+Adaptive_kf.R - model based on paper "Guo, J., Huang, W., Williams, B.M., 2014. Adaptive Kalman filter approach for stochastic short-term traffic flow rate prediction and uncertainty quantification"
+
+adaptivekalmanfilter_arma_memory.py - adaptive kalman filter of ARMA component for sensitivity analysis
+
+adaptivekalmanfilter_garch_memory.py - adaptive kalman filter of GARCH component for sensitivity analysis
 
 **Results:**
 
