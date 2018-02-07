@@ -1,6 +1,6 @@
 # This repository includes the codes and data for:
 
-the paper "Quantifying Uncertainty in Short-term Traffic Volume Prediction and its Application to Optimal Staffing Plan Development" submitted to Transportation Research Record Part C: Emerging Technologies. 
+the paper "Quantifying Uncertainty in Short-term Traffic Prediction and its Application to Optimal Staffing Plan Development" submitted to Transportation Research Record Part C: Emerging Technologies. 
 
 **Model:**
 
@@ -15,15 +15,15 @@ Improved_pso_elm.m - on-line version of pso-elm model
 
 **Results:**
 
-ARMA.csv - results from ARMA model
+ARMA.csv - results using ARMA model
 
-Zhang_2014.csv - results from paper "Zhang, Y., Zhang, Y., Haghani, A., 2014. A hybrid short-term traffic flow forecasting meth-od based on spectral analysis and statistical volatility model."
+Zhang_2014.csv - results based on paper "Zhang, Y., Zhang, Y., Haghani, A., 2014. A hybrid short-term traffic flow forecasting meth-od based on spectral analysis and statistical volatility model."
 
-Kalman.csv - results from Kalman Filter model
+Kalman.csv - results using Kalman Filter model
 
-Guo_2014.csv - results from paper "Guo, J., Huang, W., Williams, B.M., 2014. Adaptive Kalman filter approach for stochastic short-term traffic flow rate prediction and uncertainty quantification"
+Guo_2014.csv - results based on paper "Guo, J., Huang, W., Williams, B.M., 2014. Adaptive Kalman filter approach for stochastic short-term traffic flow rate prediction and uncertainty quantification"
 
-PSO_ELM.csv - results from PSO-ELM model
+PSO_ELM.csv - results using PSO-ELM model
 
-Improved_PSO_ELM.csv - results from Improved PSO-ELM model
+Improved_PSO_ELM.csv - results using Improved PSO-ELM model
 
